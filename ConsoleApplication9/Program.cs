@@ -135,29 +135,22 @@ namespace ConsoleApplication9
 
              while (i_l<=j_r) // Цикл по элементам массива пока индексы не пересекутся
              {
-                 //Console.WriteLine("Индекс справа {0} индекс слева {1} опорный элемент {2}[{3}]", i_l, j_r, op_elem, ind_op_elem);
-                 //Console.ReadKey();
-                 while (arr_sort[i_l]<op_elem)   //Поиск в левом субмассиве элемента больше опорного
+                  while (arr_sort[i_l]<op_elem)   //Поиск в левом субмассиве элемента больше опорного
                  {
-                    // Console.WriteLine("Элемент {0}[{1}]  меньше опорного элемента {2}[{3}]",arr_sort[i_l] ,i_l, op_elem, ind_op_elem);
-                     i_l++;
+                    i_l++;
                  }
                  while (arr_sort[j_r] > op_elem)  //Поиск в правом субмассиве элемента меньше опорного
                  {
-                    // Console.WriteLine("Элемент {0}[{1}]  больше опорного элемента {2}[{3}]", arr_sort[j_r], j_r, op_elem, ind_op_elem);
-                     j_r--;
+                    j_r--;
                  }
                  if (i_l<=j_r)                     // Если индексы не пересеклись, то меняем элементы местами и наращиваем/уменьшаем индексы границ
                  {
-                   //  Console.WriteLine("Меняем местами {0}[{1}] с  {2}[{3}]", arr_sort[i_l], i_l, arr_sort[j_r], j_r);
-
                      aux = arr_sort[i_l];
                      arr_sort[i_l] = arr_sort[j_r];
                      arr_sort[j_r] = aux;
                      
                      i_l++;
                      j_r--;
-                    // Console.WriteLine("Индекс слева {0} индекс слева {1}", i_l,j_r);
                  }     
              }
 
